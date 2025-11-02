@@ -26,7 +26,7 @@ public class SubmitOrderTest extends BaseTest {
 	@Test(dataProvider="getData",groups={"Purchase"})
 	public void submitOrder(HashMap<String,String> input)throws IOException, InterruptedException{
 		
-		
+	
 		ProductCatalogue productCatalogue=landingPage.loginApplication(input.get("email"), input.get("password")); // credentials given
 		List<WebElement> products=productCatalogue.getProductList();
 		productCatalogue.addProductToCart(input.get("productName"));
@@ -40,8 +40,10 @@ public class SubmitOrderTest extends BaseTest {
 		String confirmMessage=confirmationPage.getConfirmationMessage();
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 		
+			
+		}
 
-	}
+	
 	
 	//To verify ZARA COAT 3 is displaying in orders page
 	

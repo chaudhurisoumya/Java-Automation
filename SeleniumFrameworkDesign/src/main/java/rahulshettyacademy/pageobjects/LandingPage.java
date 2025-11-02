@@ -24,16 +24,16 @@ public class LandingPage extends AbstractComponent {
 	//PageFactory
 	
 	@FindBy(id="userEmail") //at run time it will be constructed as above and assigned to the variable below
-	WebElement userEmail;
+	private WebElement userEmail;
 	
 	@FindBy(id="userPassword")
-	WebElement passwordEle;
+	private WebElement passwordEle;
 	
 	@FindBy(id="login")
-	WebElement submit;
+	private WebElement submit;
 	
 	@FindBy(css="[class*='flyInOut']")
-	WebElement errorMessage;
+	private WebElement errorMessage;
 	
 	public ProductCatalogue loginApplication(String email, String password) {
 		userEmail.sendKeys(email);

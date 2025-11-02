@@ -24,14 +24,14 @@ public class ProductCatalogue extends AbstractComponent {
 	
 	//PageFactory -- It is applicable only for driver.findElement construction
 	@FindBy(css=".mb-3")
-	List<WebElement> products;
-	By productsBy=By.cssSelector(".mb-3");
+	private List<WebElement> products;
+	private By productsBy=By.cssSelector(".mb-3");
 	
-	By addToCart=By.cssSelector(".card-body button:last-of-type");
-	By toastMessage=By.cssSelector("#toast-container");
+	private By addToCart=By.cssSelector(".card-body button:last-of-type");
+	private By toastMessage=By.cssSelector("#toast-container");
 	
 	@FindBy(css=".ng-animating")
-	WebElement spinner;
+	private WebElement spinner;
 	
 	public List<WebElement> getProductList() {  //Action method
 		waitForElementToAppear(productsBy);

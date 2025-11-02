@@ -25,10 +25,10 @@ public class AbstractComponent{
 	
 	
 	@FindBy(css="[routerlink*='cart']")
-	WebElement cartHeader;
+	private WebElement cartHeader;
 	
 	@FindBy(css="[routerlink*='myorders']")
-	WebElement orderHeader;
+	private WebElement orderHeader;
 	
 	public void waitForElementToAppear(By findBy) {
 		

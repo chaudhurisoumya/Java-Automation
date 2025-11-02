@@ -39,6 +39,7 @@ public class BaseTest {
 		
 		// properties class
 		
+		
 		Properties prop=new Properties();
 		FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\rahulshettyacademy\\resources\\GlobalData.properties");
 		prop.load(fis);
@@ -103,7 +104,8 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.close();
+		//driver.close();
+		driver.quit();
 	}
 
 }
